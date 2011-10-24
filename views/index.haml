@@ -1,0 +1,14 @@
+%header
+  %p Love Languages?
+  #counter_box
+    %input{:id => "user_counter", :type => "text", :disabled => "disabled", :value => 0}
+    %label{:for => "user_counter"} User Joined
+#main
+  #debug
+  %canvas
+  .button_box
+    -%w(Ruby Lisp Java Perl JavaScript Python C Haskell PHP Erlang Go Scala).each_with_index do |lang, i|
+      %button{:id => i, :cnt => 0}= lang
+
+%footer
+  %a{:href => BLOG[:url]}= BLOG[:title]
